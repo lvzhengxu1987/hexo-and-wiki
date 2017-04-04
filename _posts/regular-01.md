@@ -15,8 +15,8 @@ keywords: 正则
 元字符是具有特殊意义的字符。使用元字符可以表达任意字符、行首、行尾、某几个字符等意义
 
 元字符一览
-![img](/site_files/20160704-1458.png)
-![img](/site_files/regular-expressions-cheat-sheet-v2.png)
+{% img /site_files/20160704-1458.png %}
+{% img /site_files/regular-expressions-cheat-sheet-v2.png %}
 
 图片来源于[百度百科-正则](http://baike.baidu.com/link?url=DeFJcFEo6R0gYlPNcFmor5_S336Q8JqGxK7bWGmPv0O8i5QwJHNlBf6ub9iu5EemGR6pY2-0nyxs1MBRM7U-Ba)，[addedbytes.com](http://www.addedbytes.com/cheat-sheets/download/)
 备注:用ctrl+v然后再按Tab键,可以键入tab字符,aix下的sed用\t不好用
@@ -36,7 +36,7 @@ keywords: 正则
 
 ******************************************************************************
 关于正则表达式可以看看这个图片
-![img](/site_files/20160704-1453.png)
+{% img /site_files/20160704-1453.png %}
 
 参考地址:
 [learn-regex](https://github.com/dwyl/learn-regex/blob/master/README.md)

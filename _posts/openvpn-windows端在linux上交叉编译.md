@@ -86,6 +86,6 @@ ln -s . bin</pre>最后不要忘记加环境变量/usr/local/nsis/bin
 
 
 <a name="image0001" style="color: black">图片</a>
-<img src="/site_files/2015-11-06_165331.png" />
-<img src="/site_files/2015-11-06_164109.png" />
+{% img /site_files/2015-11-06_165331.png %}
+{% img /site_files/2015-11-06_164109.png %}
 

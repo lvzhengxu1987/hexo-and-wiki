@@ -10,6 +10,6 @@ categories: 基础
 # ascii
 
 ascii 基础
-<img src="/site_files/asciifull.gif" />
+{% img /site_files/asciifull.gif %}
 ascii 扩展
-<img src="/site_files/asciiextend.gif" />
+{% img /site_files/asciiextend.gif %}

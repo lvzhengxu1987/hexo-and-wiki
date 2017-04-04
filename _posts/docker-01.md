@@ -30,7 +30,7 @@ docker同虚拟机相比(vmware,virtualbox),docker 是应用程序级别的容�
 > 7. 交互式Shell：Docker可以分配一个虚拟终端并关联到任何容器的标准输入上，例如运行一个一次性交互shell。
 
 #### docker 生命周期
-<img src="/site_files/docker-life.png" />
+{% img /site_files/docker-life.png %}
 
 #### docker 服务配置信息
 在ubuntu环境中,设置docker DNS，让docker在pull镜像或者访问网络时，可以通过这个dns去解析域名，修改/etc/default/docker,在里面加入`DOCKER_OPTS="--dns 223.5.5.5 --dns 114.114.114.114"`

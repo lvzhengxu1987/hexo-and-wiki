@@ -13,16 +13,16 @@ categories: 网络
 <SCRIPT language=javascript src="/site_scripts/image.js"></script>
 ## <a name="id0001" style="color: black">报文头部图片</a>
 ### IP报文格式
-<img src="/site_files/2015-09-10_110808.png"/>
+{% img /site_files/2015-09-10_110808.png %}
 
 ### TCP报文格式
 TCP报文总览<br>
-<img src="/site_files/tcp-general.png" /><br>
+{% img /site_files/tcp-general.png %}
 TCP头部详细信息<br>
-<img src="/site_files/TCP-Header.png" /><br>
+{% img /site_files/TCP-Header.png %}
 
 ### UDP报文格式
-<img src="/site_files/udp-general.png" />
+{% img /site_files/udp-general.png %}
 
 ## <a name="id0002" style="color: black">TCP报文字段解释</a>
 源端口、目的端口：16位长。标识出远端和本地的端口号。<br>
@@ -43,7 +43,7 @@ TCP协议数据报头选择重发数据报：这个选项允许接收方请求�
 在协议中DATA又可以称为payload(有效载荷,可以查看这个单词原意)<br>
 
 ### TCP创建连接、数据传输、断开连接
-<img src="/site_files/tcp-connect-disconnect.png" />
+{% img /site_files/tcp-connect-disconnect.png %}
 
 ### TCP ACK
 Rules for Generating ACK (1)<br>

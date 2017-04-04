@@ -51,16 +51,15 @@ flags一般是 n，g，p，w file 这几种.其中n是一个数字，就是进�
 
 <font color="red">以下截图均是没有加 -i 参数，也就是说把处理后的结果打印在屏幕上，没有直接修改文件</font>
 sed 替换命令效果
-![img](/site_files/sed-io-replace.jpg)
-<img src="/site_files/sed-io-replace.jpg" />
+{% img /site_files/sed-io-replace.jpg %}
 sed 删除命令效果
-<img src="/site_files/sed-io-delete.jpg" />
+{% img /site_files/sed-io-delete.jpg %}
 sed 追加命令效果
-<img src="/site_files/sed-io-append.jpg" />
+{% img /site_files/sed-io-append.jpg %}
 sed 插入命令效果
-<img src="/site_files/sed-io-insert.jpg" />
+{% img /site_files/sed-io-insert.jpg %}
 sed 更改命令效果
-<img src="/site_files/sed-io-change.jpg" />
+{% img /site_files/sed-io-change.jpg %}
 
 **下面是一些例子，多做试验理解**
 在每一行最前面加点东西，就是加个#号
