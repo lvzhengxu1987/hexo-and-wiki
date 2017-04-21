@@ -24,45 +24,24 @@ keywords: vim
 ``` vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
-" Git plugin not hosted on GitHub
 Plugin 'wincent/command-t'
 Plugin 'vim-scripts/The-NERD-tree'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'jlanzarotta/bufexplorer'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-"
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-"Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -74,16 +53,12 @@ Bundle 'Valloric/YouCompleteMe'
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-
 "------------------------------------------------------------------------------
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb18030,euc-cn,cp936,gbk,gb2312,euc-tw,big5,euc-jp,euc-kr,latin1
 set fileformats=unix,dos
 syntax on "自动语法高亮
-
 colorscheme koehler
-
 " taglist.vim
 let g:Tlist_Auto_Update=1
 let g:Tlist_Process_File_Always=1
@@ -99,7 +74,6 @@ let g:NERDTreeShowLineNumbers=1
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-
 let g:bufExplorerDefaultHelp=1       " Show default help. 
 let g:bufExplorerShowRelativePath=1  " Show relative paths.
 let g:bufExplorerSortBy='mru'        " Sort by most recently used.
@@ -108,13 +82,13 @@ let g:bufExplorerSortBy='mru'        " Sort by most recently used.
 let g:bufExplorerSplitVertSize = 30  " Split width
 let g:bufExplorerUseCurrentWindow=1  " Open in new window.
 
-
-let g:ycm_global_ycm_extra_conf='/tmp/ocserv/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='/home/teamvpn/work/gitlab-yxzc/vpn-openvpn/OPENVPN_SERVER/source_code/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax = 1  "C/C++关键字自动补全
 let g:ycm_python_binary_path='/usr/bin/python'
 let g:ycm_collect_identifiers_from_tags_files=1
-set completeopt-=preview  "补全内容不以分割子窗口形式出现,只显示补全列表
-let g:ycm_cache_omnifunc=0 "禁止缓存匹配项,每次都重新生成匹配
+set completeopt-=preview  "补全内容不以分割子窗口形式出现，只显示补全列表
+let g:ycm_cache_omnifunc=0 "禁止缓存匹配项，每次都重新生成匹配
+let g:ycm_key_invoke_completion='<M-;>' "修改对C函数的补全快捷键,默认是CTRL+space,修改为ALT + ;
 "设置转到定义的快捷键,这个功能非常赞
 nnoremap <leader>aa :YcmCompleter GoTo<CR>
 nnoremap <leader>ab :YcmCompleter GoToDefinition<CR>
@@ -123,13 +97,11 @@ nnoremap <leader>ad :YcmCompleter GoToInclude<CR>
 nnoremap <leader>ae :YcmCompleter GetType<CR>
 nnoremap <leader>af :YcmCompleter GetDoc<CR>
 
-
 nmap  <F1> :TlistToggle<cr>
 nmap  <F2> :NERDTreeToggle<cr>
-#nmap  <F3> :!make clean<cr>
-nmap  <F3> :!ctags -R<cr>
+"nmap  <F3> :!make clean<cr>
+nmap  <F3> :!ctags -R <cr>
 nmap  <F4> :!make<cr>
-
 set autowrite 
 set autoread
 set showcmd
@@ -140,12 +112,12 @@ set foldmethod=manual   " 手动折叠
 set si          " smartindent 类似于语法匹配缩进
 set autoindent
 set cindent
-"set expandtab       " 输入等同一个tab长度的空格
-set noexpandtab      " 不要用空格代替制表符
 set smarttab        " 在行和段开始处使用制表符
 set shiftwidth=4    " 设定 << 和 >> 命令移动时的宽度为 4
 set softtabstop=4   " 使得按退格键时可以一次删掉 4 个空格
 set tabstop=4       " 设定 tab 长度为 4
+set expandtab       " 输入等同一个tab长度的空格
+"set noexpandtab      " 不要用空格代替制表符
 set wrap            " 自动换行
 set backspace=indent,eol,start " 不设定的话在插入状态无法用退格键和 Delete 键删除回车符
 set ruler           " 打开状态栏标尺
@@ -167,6 +139,11 @@ set magic " 设置魔术
 set hidden " 允许在有未保存的修改时切换缓冲区，此时的修改由 vim 负责保存
 set guioptions-=T " 隐藏工具栏
 set guioptions-=m " 隐藏菜单栏
+
+autocmd FileType make setlocal noexpandtab
+"autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
+"autocmd FileType python set tabstop=4|set shiftwidth=4|set expandtab
+"autocmd BufEnter *.py set ai sw=4 ts=4 sta et fo=croql
 ```
 
 将配置放到.vimrc后，保存关闭，然后再重新打开，再执行``:PluginInstall``,让Vundle将设置好的插件下载并安装。 最后再将``.vim/bundle/bufexplorer/plugin/bufexplorer.vim``中里面的be改成bb，习惯用\bb
