@@ -15,7 +15,7 @@ SELECT COUNT(1) FROM tablename WHERE someCondition
 
 一次同时查询多个表的记录条数
 
-```
+``` sql
 SELECT
   (SELECT COUNT(*) FROM table1 WHERE someCondition) as table1Count,
   (SELECT COUNT(*) FROM table2 WHERE someCondition) as table2Count,
@@ -38,7 +38,7 @@ FROM table1
 
 Duplicating a MySQL table, indexes and data
 
-```
-CREATE TABLE tbl\_new AS SELECT * FROM tbl\_old;
+``` sql
+CREATE TABLE tbl_new AS SELECT * FROM tbl_old;
 ```
 
