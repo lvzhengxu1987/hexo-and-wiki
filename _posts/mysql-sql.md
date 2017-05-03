@@ -39,6 +39,19 @@ FROM table1
 Duplicating a MySQL table, indexes and data
 
 ``` sql
-CREATE TABLE tbl_new AS SELECT * FROM tbl_old;
+CREATE TABLE new_table LIKE old_table; INSERT new_table SELECT * FROM old_table;
+
+MyISAM 
+
+CREATE TABLE copy LIKE original;
+ALTER TABLE copy DISABLE KEYS
+INSERT INTO copy SELECT * FROM original;
+ALTER TABLE copy ENABLE KEYS;
+
+InnoDB
+
+SET unique_checks=0; SET foreign_key_checks=0; 
+..insert sql code here..
+SET unique_checks=1; SET foreign_key_checks=1;
 ```
 
